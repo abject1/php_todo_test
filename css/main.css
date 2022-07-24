@@ -1,0 +1,141 @@
+/* variable */
+
+:root {
+    /* fonts */
+    --fonts: 'Roboto', sans-serif;
+
+    /* colors */
+    --black: #000000;
+    --white: #ffffff;
+    --text-color: #0a3d62;
+    --header-color: #f8c291;
+    --header-background: #eb2f06;
+    --body-color: #f8c291;
+
+
+    --border: 0.3rem solid var(--black);
+    --border-radius: 0.5rem;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+a:hover {
+    font-size: 1.6rem;
+}
+
+/* body */
+
+body {
+    font-family: var(--fonts);
+    color: var(--text-color);
+    min-height: 100vh;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+header {
+    display: flex;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--header-background);
+}
+
+header img {
+    width: 5%;
+}
+
+/* main */
+
+main {
+    min-height: 84%;
+    display: grid;
+    grid-template-areas: 
+    'add-todo'
+    'seen-todo'
+    ;
+}
+
+main form {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--white);
+    grid-area: add-todo;
+    max-width: 50%;
+    margin: 0.2rem auto;
+}
+
+main form h3 {
+    text-decoration: underline;
+    margin-bottom: 0.8rem;
+}
+
+main form p {
+    margin: 0.5rem auto;
+}
+
+main .todos-list {
+    grid-area: seen-todo;
+    margin: 0.2rem auto;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+}
+
+main .todos-list h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* table */ 
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: var(--border);
+    padding: 10px;
+}
+
+/* btn delete */
+
+.btn-delete {
+    border-radius: var(--border-radius);
+    background-color: red;
+    color: var(--white);
+    padding: 0.2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--white);
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 0.5rem;
+}
